@@ -1,0 +1,5 @@
+Your account has been activated on {shopname}.
+
+Login : {email}
+
+{shop_url}
