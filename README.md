@@ -1,6 +1,7 @@
 Prestashop
 ==========
-1. Download and install the module.
+1. As we are overriding a controller we need to delete cache/class_index.php
+2. Download and install the module.
   
   - copy account_activated.html and account_activated.txt from the mails.zip in mails/
   
@@ -22,9 +23,8 @@ Prestashop
 
 NOTE: The override for this function wasn't working so I left this manual modification for now.
 
-  - As we are overriding a controller we need to delete cache/class_index.php
         
-2. Deactivate automatic activation on account creation.
+3. Deactivate automatic activation on account creation.
 
   To do so you need to modify a little code. In controllers/front/AuthController.php you need to change:
     
@@ -37,4 +37,4 @@ NOTE: The override for this function wasn't working so I left this manual modifi
   Once you've done this your customers will have a deactivated account when the registration is complete.
 
         
-3. Modify email templates in mails/{lang_code}/account to include the message that the account is not active yet.
+4. Modify email templates in mails/{lang_code}/account to include the message that the account is not active yet.
